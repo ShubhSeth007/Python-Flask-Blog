@@ -1,0 +1,49 @@
+{% extends "layout.html" %}
+{% block body %}
+        <!-- Page Header-->
+        <header class="masthead" style="background-image: url('{{ url_for('static', filename='assets/img/home-bg.jpg') }}')">
+            <div class="container position-relative px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7">
+                        <div class="site-heading">
+                            <h1>Clean Blog</h1>
+                            <span class="subheading">A Blog Theme by Start Bootstrap</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- Main Content-->
+        <div class="container px-4 px-lg-5">
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="col-md-10 col-lg-8 col-xl-7">
+                    <!-- Post preview-->
+                   <form id="contactForm" action="/edit/{{ sno }}" method="post">
+    <div class="form-floating">
+        <input class="form-control" id="title" type="text" name="title" placeholder="Enter your name..." required value="{{ post.title }}"/>
+        <label for="title">Title</label>
+    </div>
+
+    <div class="form-floating">
+        <input class="form-control" id="slug" type="text" name="slug" placeholder="Enter your phone number..." required value="{{ post.slug }}"/>
+        <label for="slug">Slug</label>
+    </div>
+    <div class="form-floating">
+        <textarea class="form-control" id="content" name="content" placeholder="Enter your message..." required value="{{ post.content }}"></textarea>
+        <label for="content">Content</label>
+    </div>
+    <br />
+    <button class="btn btn-primary text-uppercase" type="submit">Send</button>
+</form>
+                </div>
+                <!-- Divider-->
+                <hr class="my-4" />
+                <!-- Pager-->
+                {% if posts|length > 5 %}
+                    <div class="d-flex justify-content-end mb-4">
+                        <a class="btn btn-primary text-uppercase" href="#">Older Posts →</a>
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+{% endblock %}

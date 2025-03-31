@@ -1,0 +1,17 @@
+{
+  "params": {
+      "localserver": "True",
+      "local_uri": "mysql+pymysql://root:@localhost/shubhseth",
+      "prod_uri": "mysql+pymysql://root:@localhost/shubhseth",
+      "fb_url": "https://facebook.com/shubhseth",
+      "blog_name": "shubh seth the great",
+      "gmail-user": "sseth7881@gmail.com" ,
+      "gmail-password": "wpqk ywnz chnc bhhw",
+      "about_text": "Hi my name is harry and I create programming tutorials and I am a good boy",
+      "login_image":"login.svg",
+      "admin_user":"harry",
+      "admin_password": "subscribenow",
+      "folder_location": "C:\\Users\\shubh seth\\PycharmProjects\\objectdetection\\pythonProject\\venv\\dhrr",
+      "no_of_posts": "2"
+  }
+  }
