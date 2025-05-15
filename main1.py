@@ -184,5 +184,6 @@ def edit(sno):
         return render_template('edit.html',params=params,post=post,sno=sno)
 
 # Run the app safely
-if __name__ == "__main__":
-    app.run(debug=True)
+if __name__ == '__main__':
+    port = int(os.environ.get('PORT', 5000))  # Use the PORT Render provides
+    app.run(host='0.0.0.0', port=port, debug=True)
