@@ -18,7 +18,7 @@ except (FileNotFoundError, KeyError):
     print("Error: config.json file not found or invalid format!")
 
 # Boolean check for local server
-local_server = True  # Corrected from "True" (string)
+local_server = False  # Corrected from "True" (string)
 
 app = Flask(__name__)
 app.secret_key='super-secret-key'
